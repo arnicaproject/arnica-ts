@@ -1,0 +1,26 @@
+{
+  "name": "arnica-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arnicaproject/arnica-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/arnicaproject/arnica-ts/issues"
+  },
+  "homepage": "https://github.com/arnicaproject/arnica-ts#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
+}
