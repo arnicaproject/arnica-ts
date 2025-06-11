@@ -1,27 +1,4 @@
-
-
-class HttpClient {
-    private readonly baseUrl: string = "http://localhost:3000/"
-
-    headers(): HeadersInit {
-        return {
-            'Content-Type': 'application/json',
-        };
-    }
-
-    async post(url: string, body: any): Promise<Response> {
-        const fullUrl = this.baseUrl + url
-
-        const response = await fetch(fullUrl, {
-            method: "POST",
-            headers: this.headers(),
-            body: JSON.stringify(body)
-        });
-
-        return response;
-    }
-}
-
+import { HttpClient, HttpResult, HttpRoutes } from "./http";
 
 export class ArnicaClient {
     private readonly apiKey: string // TODO
@@ -32,13 +9,26 @@ export class ArnicaClient {
         this.client = new HttpClient();
     }
 
-    async login(username: string, password: string) {
+    async healthCheck(apiKey: string) {
+        return await this.client.post(HttpRoutes.healthCheck, { "apiKey": apiKey });
+    }
+
+    async login(email: string, password: string): HttpResult {
         const body = {
-            "email": username,
+            "email":    email,
             "password": password
         };
 
-        let result = await this.client.post("auth/loginUser", body);
-        return result;
+        return await this.client.post(HttpRoutes.loginUser, body);
+    }
+
+    async register(email: string, username: string, password: string): HttpResult {
+        const body = {
+            "email":    email,
+            "username": username,
+            "password": password
+        };
+
+        return await this.client.post(HttpRoutes.registerUser, body);
     }
 }
