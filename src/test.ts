@@ -1,8 +1,8 @@
-import { ArnicaClient } from './api';
+import { PrimroseClient } from './api';
 
 async function main() {
     const apiKey = "";
-    const client = new ArnicaClient(apiKey);
+    const client = new PrimroseClient(apiKey);
 
     const response = await client.login(
         "ashton2@gmail.com", 

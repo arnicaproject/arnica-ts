@@ -1,5 +1,5 @@
 {
-  "name": "arnica-ts",
+  "name": "primrose-ts",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arnicaproject/arnica-ts.git"
+    "url": "git+https://github.com/primrosecrm/primrose-ts.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/arnicaproject/arnica-ts/issues"
+    "url": "https://github.com/primrosecrm/primrose-ts/issues"
   },
-  "homepage": "https://github.com/arnicaproject/arnica-ts#readme",
+  "homepage": "https://github.com/primrosecrm/primrose-ts#readme",
   "dependencies": {
     "node-fetch": "^3.3.2"
   }

@@ -23,7 +23,7 @@ class HttpClient {
 }
 
 
-export class ArnicaClient {
+export class PrimroseClient {
     private readonly apiKey: string // TODO
     private readonly client: HttpClient
 
